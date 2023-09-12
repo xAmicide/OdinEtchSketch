@@ -76,12 +76,17 @@ function changeBox(val, opacity) {
     a.addEventListener("mouseover", () => {
       switch (selection) {
         case "color":
-          a.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+          a.style.opacity = 1;
+          a.style.backgroundColor = `rgba(${red}, ${green}, ${blue})`;
           break;
         case "rainbow":
+          a.style.opacity = 1;
+
           a.style.backgroundColor = `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
           break;
         case "eraser":
+          a.style.opacity = 1;
+
           a.style.backgroundColor = `rgb(248, 248, 255)`;
           break;
         case "clear":
