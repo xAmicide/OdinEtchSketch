@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="control-box">
+          <h1>Etch a Sketch</h1>
+          <div class="selector"></div>
+          <button class="btn color selected" id="color">Color Mode</button>
+          <button class="btn rainbow" id="rainbow">Rainbow Mode</button>
+          <button class="btn eraser" id="eraser">Eraser</button>
+          <button class="btn clear" id="clear">Darken Mode</button>
+          <div class="size-selection">
+            <span id="size-select">default</span>
+            <input
+              type="range"
+              name="size"
+              id="range"
+              step="4"
+              min="4"
+              max="64"
+              value="32"
+            />
+          </div>
+        </div>
+        <div class="etch-box" id="etch-box"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="/app.js"></script>
+
+<style>
+  body {
+    background-color: darkgray;
+  }
+  /* container */
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container h1 {
+    font-size: 48px;
+    color: slategray;
+  }
+  /* content */
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  /* control box */
+  .control-box {
+    gap: 24px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .btn {
+    size: 50px;
+    border-radius: 8px;
+    background-color: inherit;
+    border-style: solid;
+    border-color: slategray;
+  }
+  .btn:hover {
+    background-color: black;
+    color: darkgray;
+    border-color: black;
+  }
+  .size-selection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  /* etch box */
+  .etch-box {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    border: none;
+    background: gainsboro;
+  }
+
+  .selected {
+    background-color: black;
+    color: darkgray;
+    border-color: black;
+  }
+  .etch-item {
+    opacity: 1;
+    border: none;
+    background-color: ghostwhite;
+  }
+</style>
